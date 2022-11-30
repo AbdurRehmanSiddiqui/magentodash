@@ -7,7 +7,7 @@ use Magento\Framework\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
 use Magento\Framework\App\ObjectManager;
 
-class Hello extends Action
+class Hello1 extends Action
 {
     /**
      * @var PageFactory
