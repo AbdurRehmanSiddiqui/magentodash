@@ -1,16 +1,27 @@
 <?xml version="1.0"?>
 <page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
     <referenceContainer name="main">
         <block name="Pointeger.Core.Post" class="Pointeger\Core\Block\Display"
                template="Pointeger_Core::sayhello.phtml">
-
+            <block name="child.block.pointeger" class="Pointeger\Core\Block\Display"
+                   template="Pointeger_Core::sayhello.phtml">
+            </block>
         </block>
-
     </referenceContainer>
-    <referenceBlock name="top.search" template="Pointeger_Core::form.mini.phtml">
 
+    <referenceBlock name="top.search" template="Pointeger_Core::form.mini.phtml">
     </referenceBlock>
+    <move element="copyright" destination="header.panel" before="skip_to_content"/>
+
+
+
+
+
+    <!--   <referenceBlock name="form.subscribe" template="Pointeger_Core::subscribe.phtml"/>-->
+   <!-- <block  class="Pointeger\Core\Block\Footer" name="copyrightc" template="Pointeger_Core::copyright.phtml" before="-"/>
+-->
 
 
 </page>
