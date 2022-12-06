@@ -3,8 +3,9 @@
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <referenceContainer name="footer">
         <block name="label" template="Pointeger_Core::subscribe.phtml" after="form.subscribe"/>
+
     </referenceContainer>
 
-    <!--    <referenceBlock name="copyright" template="Pointeger_Core::copyright.phtml"/>-->
-        <move element="copyright" destination="header.panel" before="skip_to_content"/>
+
+
 </page>
