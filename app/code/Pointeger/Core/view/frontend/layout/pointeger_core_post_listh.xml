@@ -3,34 +3,24 @@
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
 
     <referenceContainer name="main">
-<!--        <block name="Pointeger.Core.Post" class="Pointeger\Core\Block\Display"-->
-<!--               template="Pointeger_Core::sayhello.phtml">-->
-<!--            <block name="child.block.pointeger" class="Pointeger\Core\Block\Display"-->
-<!--                   template="Pointeger_Core::sayhello.phtml">-->
-<!--            </block>-->
-<!--        </block>-->
+        <block name="child.block.pointeger" class="Pointeger\Core\Block\Display"
+               template="Pointeger_Core::sayhello.phtml">
+        </block>
     </referenceContainer>
 
-
-    <referenceBlock name="top.search" template="Pointeger_Core::form.mini.phtml">
-    </referenceBlock>
+    <referenceBlock name="top.search" template="Pointeger_Core::form.mini.phtml"/>
     <move element="copyright" destination="header.panel" before="skip_to_content"/>
 
-
     <referenceContainer name="content">
-        <block class="Magento\Cms\Block\Block" name="unick_block_name">
+        <block class="Pointeger\Core\Block\Check" name="pointeger_check">
             <arguments>
                 <argument name="block_id" xsi:type="string">portal_header</argument>
             </arguments>
         </block>
     </referenceContainer>
 
-
-
-
     <!--   <referenceBlock name="form.subscribe" template="Pointeger_Core::subscribe.phtml"/>-->
-   <!-- <block  class="Pointeger\Core\Block\Footer" name="copyrightc" template="Pointeger_Core::copyright.phtml" before="-"/>
--->
-
+    <!-- <block  class="Pointeger\Core\Block\Footer" name="copyrightc" template="Pointeger_Core::copyright.phtml" before="-"/>
+ -->
 
 </page>
