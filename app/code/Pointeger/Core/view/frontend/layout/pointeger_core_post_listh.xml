@@ -12,7 +12,7 @@
     <move element="copyright" destination="header.panel" before="skip_to_content"/>
 
     <referenceContainer name="content">
-        <block class="Pointeger\Core\Block\Check" name="pointeger_check">
+        <block class="Pointeger\Core\Block\Check" name="pointeger_check" ifconfig="blocksettings/general/enable">
             <arguments>
                 <argument name="block_id" xsi:type="string">portal_header</argument>
             </arguments>

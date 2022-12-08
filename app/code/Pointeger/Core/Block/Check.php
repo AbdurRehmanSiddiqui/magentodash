@@ -1,12 +1,15 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Pointeger\Core\Block;
-use Magento\Customer\Model\SessionFactory;
+
 use Magento\Cms\Model\BlockFactory;
-use Magento\Store\Model\StoreManagerInterface;
 use Magento\Cms\Model\Template\FilterProvider;
+use Magento\Customer\Model\SessionFactory;
+use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\View\Element\Context;
+use Magento\Store\Model\StoreManagerInterface;
 
 /**
  * Class Check
@@ -18,6 +21,7 @@ class Check extends \Magento\Cms\Block\Block
      * @var SessionFactory
      */
     protected $sessionFactory;
+    protected $scopeConfig;
 
     /**
      * Constructor
@@ -35,11 +39,27 @@ class Check extends \Magento\Cms\Block\Block
         StoreManagerInterface $storeManager,
         BlockFactory $blockFactory,
         SessionFactory $sessionFactory,
+        ScopeConfigInterface $scopeinterface,
+
 
         array $data = []
     ) {
         $this->sessionFactory = $sessionFactory;
+        $this->scopeConfig = $scopeinterface;
         parent::__construct($context, $filterProvider, $storeManager, $blockFactory, $data);
+    }
+
+    /**
+     * @return bool
+     */
+    public function check_session()
+    {
+        $session = $this->sessionFactory->create();
+        if ($session->isLoggedIn()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**
@@ -48,22 +68,21 @@ class Check extends \Magento\Cms\Block\Block
     protected function _toHtml()
     {
         $html = '';
-        if ($this->check_session()) {
+//        if ($this->checkConfig()) {
             $html = parent::_toHtml();
-        }
+//        }
         return $html;
     }
 
-    /**
-     * @return bool
-     */
-    public function check_session()
+    public function checkConfig(): bool
     {
-        $session= $this->sessionFactory->create();
-        if ($session->isLoggedIn()) {
+        $val = $this->scopeConfig->getValue(
+            'blocksettings/general/enable',
+            \Magento\Store\Model\ScopeInterface::SCOPE_STORE
+        );
+        if ($val) {
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
 }
