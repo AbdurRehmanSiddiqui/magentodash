@@ -5,23 +5,23 @@
         <tab id="pointeger" translate="label" sortOrder="10">
             <label>Pointeger</label>
         </tab>
-        <section id="blocksettings" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1"
+        <section id="namesection" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1"
                  showInStore="1">
-            <class>separator-top</class>
-            <label>Block Settings</label>
+<!--            <class>separator-top</class>-->
+            <label>Add a new name</label>
             <tab>pointeger</tab>
             <resource>Magento_Catalog::config_catalog</resource>
 
-
-            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
+            <group id="namegroup" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
                    showInStore="1">
-                <label>CMS BLock render Configuration</label>
-                <field id="render_block" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1"
+                <label>Add a new nick name</label>
+                <field id="namefeild" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1"
                        showInStore="1">
-                    <label>Render Block</label>
+                    <label>Enter your name</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
             </group>
+
         </section>
     </system>
 </config>

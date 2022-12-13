@@ -296,6 +296,7 @@ return [
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeGraphQl' => 1,
         'Pointeger_Core' => 1,
+        'Pointeger_Checkout' => 1,
         'Pointeger_Catalog' => 1,
         'Temando_ShippingRemover' => 1,
         'Vertex_Tax' => 1,

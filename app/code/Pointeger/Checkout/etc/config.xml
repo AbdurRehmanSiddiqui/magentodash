@@ -2,10 +2,10 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
-        <blocksettings>   <!--section name-->
-            <general>     <!--group name-->
-                <enable>1</enable> <!--feild name-->
-            </general>
-        </blocksettings>
+        <namesection>   <!--section name-->
+            <namegroup>     <!--group name-->
+                <namefeild>nick</namefeild> <!--feild name-->
+            </namegroup>
+        </namesection>
     </default>
 </config>
