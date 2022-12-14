@@ -1,0 +1,28 @@
+input.product-form-input {
+    /*width: 55%;*/
+    height: 45PX;
+    BORDER-BLOCK-WIDTH: 2PX;
+    border-radius: 15px;
+    text-align: center;
+    /*padding-right: 15px;*/
+}
+
+#product-data-form-btn {
+    height: 40px;
+    color: aliceblue;
+    background: black;
+    border-radius: 8px;
+    margin-left: 600px;
+    margin-top: 30px;
+}
+
+.product-form-label {
+    FONT-SIZE: larger;
+    font-weight: bold;
+
+}
+
+body {
+    background-color: aliceblue;
+
+}
