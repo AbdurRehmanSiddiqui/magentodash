@@ -6,7 +6,8 @@
 </head>
 <body>
     <referenceContainer name="content">
-      <block name="html-form"  template="Pointeger_Crud::form.phtml"/>
+      <block name="html-form"  class="Magento\Framework\View\Element\Template" template="Pointeger_Crud::form.phtml"/>
     </referenceContainer>
 </body>
 </page>
+

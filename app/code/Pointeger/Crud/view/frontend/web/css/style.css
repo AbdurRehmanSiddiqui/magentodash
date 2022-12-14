@@ -1,12 +1,9 @@
 input.product-form-input {
-    /*width: 55%;*/
-    height: 45PX;
-    BORDER-BLOCK-WIDTH: 2PX;
+    height: 45px;
+    border-block-width: 2px;
     border-radius: 15px;
     text-align: center;
-    /*padding-right: 15px;*/
 }
-
 #product-data-form-btn {
     height: 40px;
     color: aliceblue;
@@ -15,14 +12,12 @@ input.product-form-input {
     margin-left: 600px;
     margin-top: 30px;
 }
-
 .product-form-label {
-    FONT-SIZE: larger;
+    font-size: larger;
     font-weight: bold;
-
 }
-
 body {
     background-color: aliceblue;
-
 }
+
+

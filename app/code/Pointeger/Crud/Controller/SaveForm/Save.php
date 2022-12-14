@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Pointeger\Crud\Controller\SaveForm;
 
@@ -7,9 +7,15 @@ use Magento\Framework\App\Action\Context;
 use Magento\Framework\Controller\Result\RedirectFactory;
 use Magento\Framework\Message\ManagerInterface;
 
-
+/**
+ * Class Save
+ * @package Pointeger\Crud\Controller\SaveForm
+ */
 class Save extends Action
 {
+    /**
+     * @var ManagerInterface
+     */
     protected $messageManager;
     protected $redirectFactory;
 
@@ -31,11 +37,12 @@ class Save extends Action
      */
     public function execute()
     {
-        $name = $_POST['product-name'];
-        $sku = $_POST['product-sku'];
-        $description = $_POST['product-description'];
+        $name = $this->getRequest()->getParam('product-name');
+        $sku = $this->getRequest()->getParam('product-sku');
+        $description = $this->getRequest()->getParam('product-description');
         $this->messageManager->addSuccessMessage("Redirection Successfull");
         $redirect = $this->redirectFactory->create();
         return $redirect->setPath("pointeger_crud/post/form");
     }
 }
+

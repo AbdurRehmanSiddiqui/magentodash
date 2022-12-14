@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Pointeger\Crud\Controller\Post;
 
@@ -38,3 +38,4 @@ class Form extends Action
         return $this->pagefactory->create();
     }
 }
+
