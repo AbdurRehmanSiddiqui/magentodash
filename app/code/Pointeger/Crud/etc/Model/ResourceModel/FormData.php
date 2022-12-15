@@ -11,3 +11,4 @@ class FormData extends AbstractDb
         $this->_init("Pointeger_Crud_form","id");
     }
 }
+
