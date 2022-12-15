@@ -1,0 +1,13 @@
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="Pointeger_Crud_form" resource="default" engine="innodb">
+        <column xsi:type="smallint" name="id" unsigned="true" nullable="false" identity="true" comment="product_ID"/>
+        <column xsi:type="varchar" name="product_name" nullable="false" />
+        <column xsi:type="varchar" name="product_sku" nullable="false" />
+        <column xsi:type="varchar" name="product_description" nullable="false"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+    </table>
+
+</schema>
