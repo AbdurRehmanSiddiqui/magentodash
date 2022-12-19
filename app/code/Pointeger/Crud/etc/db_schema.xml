@@ -1,5 +1,6 @@
 <schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+<!--    Delete table in database and change its name from here and then setup:upgrade-->
     <table name="Pointeger_Crud_form" resource="default" engine="innodb">
         <column xsi:type="smallint" name="id" unsigned="true" nullable="false" identity="true" comment="product_ID"/>
         <column xsi:type="varchar" name="product_name" nullable="false" />
@@ -9,6 +10,5 @@
             <column name="id"/>
         </constraint>
     </table>
-
 </schema>
 
