@@ -8,6 +8,7 @@ use Magento\Framework\Model\AbstractModel;
 
 class FormData extends AbstractModel
 {
+
     public function setProductName($product_name)
     {
         return $this->setData('product_name', $product_name);

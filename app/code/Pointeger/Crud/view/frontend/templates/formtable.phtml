@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @var Magento\Framework\View\Element\Template $block
+ * @var Pointeger\Crud\ViewModel\Load $load
+ */
+$load = $block->getData('load_vm');
+$list = $load->getformdata();
+
+?>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Product Name</th>
+        <th>Product Sku</th>
+        <th>Product Description</th>
+    </tr>
+
+    <?php foreach ($list as $data) { ?>
+
+        <tr>
+            <td><?php
+                 echo $data->getData('id'); ?></td>
+            <td><?php
+                echo $data->getData('product_name'); ?></td>
+            <td><?php
+                echo $data->getData('product_sku'); ?></td>
+            <td><?php
+                echo $data->getData('product_description') ?></td>
+        </tr>
+
+    <?php  }  ?>
+
+</table>
+
