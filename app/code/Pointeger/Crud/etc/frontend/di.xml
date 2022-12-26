@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <type name="Magento\Catalog\Model\Product">
+        <plugin name="Pointeger_Crud_ProductPlugin" type="Pointeger\Crud\Plugin\ProductPlugin" sortOrder="1" disabled="true"/>
+    </type>
+    <type name="Magento\Checkout\Controller\Cart\Add">
+        <plugin name="Pointeger_Crud_AddToCartPlugin" type="Pointeger\Crud\Plugin\AddToCartPlugin" sortOrder="10" disabled="false"/>
+    </type>
+</config>
+
+
+
