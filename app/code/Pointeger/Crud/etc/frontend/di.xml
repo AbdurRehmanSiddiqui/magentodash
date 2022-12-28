@@ -6,6 +6,7 @@
     <type name="Magento\Checkout\Controller\Cart\Add">
         <plugin name="Pointeger_Crud_AddToCartPlugin" type="Pointeger\Crud\Plugin\AddToCartPlugin" sortOrder="10" disabled="false"/>
     </type>
+    <preference for="Magento\Catalog\Block\Product\ListProduct" type="Pointeger\Crud\Block\CustomerGroup"/>
 </config>
 
 
