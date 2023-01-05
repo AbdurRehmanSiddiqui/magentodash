@@ -27,22 +27,22 @@ class ProductView implements ObserverInterface
     /**
      * @var ViewProductFactory
      */
-    protected $viewProductfacctory;
+    protected $viewProductfactory;
 
     /**
      * ProductView constructor.
      * @param Registry $register
      * @param SessionFactory $sessionFactory
-     * @param ViewProductFactory $viewProductfacctory
+     * @param ViewProductFactory $viewProductfactory
      */
     public function __construct(
         Registry $register,
         SessionFactory $sessionFactory,
-        ViewProductFactory $viewProductfacctory
+        ViewProductFactory $viewProductfactory
     ) {
         $this->register = $register;
         $this->sessionFactory = $sessionFactory;
-        $this->viewProductfacctory = $viewProductfacctory;
+        $this->viewProductfactory = $viewProductfactory;
     }
 
     /**
@@ -52,13 +52,11 @@ class ProductView implements ObserverInterface
     public function execute(Observer $observer)
     {
         $session = $this->sessionFactory->create();
-        $viewProduct = $this->viewProductfacctory->create();
         if ($session->isLoggedIn()) {
+            $viewProduct = $this->viewProductfactory->create();
             $viewProduct->setCustomerId($session->getCustomerId());
             $viewProduct->setSku($this->register->registry('current_product')->getData('sku'));
             $viewProduct->save();
-        } else {
-            return null;
         }
     }
 }
