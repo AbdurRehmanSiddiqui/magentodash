@@ -12,5 +12,3 @@ class Student extends AbstractDb
         $this->_init("pointeger_student", "entity_id");
     }
 }
-
-

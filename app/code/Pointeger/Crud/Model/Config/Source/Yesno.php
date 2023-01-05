@@ -2,35 +2,35 @@
 declare(strict_types=1);
 
 namespace Pointeger\Crud\Model\Config\Source;
-
+use Magento\Customer\Api\GroupRepositoryInterface;
+use Magento\Framework\Api\SearchCriteriaInterface;
 use Pointeger\Crud\Helper\Data;
 
 /**
- * Class Yesno
- * @package Pointeger\Crud\Model\Config\Source
+ * @api
+ * @since 100.0.2
  */
 class Yesno implements \Magento\Framework\Option\ArrayInterface
 {
     /**
-     * @var Data
-     */
-    protected $dataHelper;
-
-    /**
-     * Yesno constructor.
-     * @param Data $dataHelper
-     */
-    public function __construct(Data $dataHelper)
-    {
-        $this->datahelper=$dataHelper;
-    }
-
-    /**
+     * Options getter
+     *
      * @return array
      */
+    protected $group;
+    protected $datahelper;
+    public function __construct(GroupRepositoryInterface $group,Data $datahelper)
+    {
+        $this->group=$group;
+        $this->datahelper=$datahelper;
+    }
+
     public function toOptionArray()
     {
-       return $this->dataHelper->getCustomerGroups();
+
+       return $this->datahelper->getCustomerGroups();
+       // return [['value' => 'Wholesale', 'label' => __('Wholesale')], ['value' => 'Retailer', 'label' => __('Retailer')]];
+
     }
 
     /**

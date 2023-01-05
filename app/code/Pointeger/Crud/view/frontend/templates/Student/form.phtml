@@ -1,12 +1,11 @@
 <?php
-declare(strict_types=1);
+
 /**
  * @var \Magento\Framework\View\Element\Template $block
  */
 $url = $block->getUrl("pointeger_crud/student/save");
 ?>
-<form action="<?php
-echo $url ?>" class="student-data" id="student-data-form"
+<form action="<?= $url ?>" class="student-data" id="student-data-form"
       method="post">
     <label for="student-name" class="student-form-label">name</label>
     <input type="text" name="student-name" class="student-form-input" id="student-name"

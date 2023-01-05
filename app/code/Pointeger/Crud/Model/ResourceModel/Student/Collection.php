@@ -10,12 +10,7 @@ class Collection extends AbstractCollection
 {
     protected function _construct()
     {
-        $this->_init(ModelStudent::class,ResourceModelStudent::class);
+        $this->_init(ModelStudent::class, ResourceModelStudent::class);
     }
 
 }
-
-
-
-
-

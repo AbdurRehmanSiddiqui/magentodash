@@ -9,7 +9,6 @@ use Magento\Framework\Model\AbstractModel;
 
 class Student extends AbstractModel
 {
-
     public function setStudentName($student_name)
     {
         return $this->setData('name', $student_name);
@@ -30,5 +29,3 @@ class Student extends AbstractModel
         $this->_init(ResourceModel\Student::class);
     }
 }
-
-

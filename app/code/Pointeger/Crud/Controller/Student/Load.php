@@ -8,7 +8,6 @@ use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
 
-
 /**
  * Class Load
  * @package Pointeger\Crud\Controller\Student

@@ -51,4 +51,3 @@ class Load implements ArgumentInterface
         }
     }
 }
-
