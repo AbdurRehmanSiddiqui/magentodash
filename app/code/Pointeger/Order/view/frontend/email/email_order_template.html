@@ -1,0 +1,8 @@
+{{template config_path="design/email/header_template"}}
+<p>{{trans
+"Customer Email : %templateVar."
+templateVar = $customer_email}}</p>
+<p>{{trans
+"%templateVar."
+templateVar = $message}}</p>
+{{template config_path="design/email/footer_template"}}
