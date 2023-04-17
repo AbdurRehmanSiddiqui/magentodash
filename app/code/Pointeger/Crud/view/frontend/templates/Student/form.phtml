@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @var \Magento\Framework\View\Element\Template $block
+ */
+$url = $block->getUrl("pointeger_crud/student/save");
+?>
+<form action="<?= $url ?>" class="student-data" id="student-data-form"
+      method="post">
+    <label for="student-name" class="student-form-label">name</label>
+    <input type="text" name="student-name" class="student-form-input" id="student-name"
+           placeholder="Your name" required/>
+    <label for="student-rollno" class="student-form-label">Roll Number</label>
+    <input type="text" name="student-rollno" class="student-form-input" id="student-rollno"
+           placeholder="Your Roll Number" required/>
+
+    <button id="student-data-form-btn" type="submit">Submit</button>
+
+</form>
+
+
+

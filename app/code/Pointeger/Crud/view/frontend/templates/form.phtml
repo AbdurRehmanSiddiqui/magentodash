@@ -1,0 +1,23 @@
+<?php declare(strict_types=1);
+/**
+ * @var \Magento\Framework\View\Element\Template $block
+ */
+$url=$block->getUrl("pointeger_crud/saveform/save");
+?>
+<form action="<?php echo $url ?>" class="product-data" id="product-data-form"
+      method="post">
+    <label for="product-name" class="product-form-label">product name</label>
+    <input type="text" name="product-name" class="product-form-input" id="product-name"
+           placeholder="Your Product name" required/>
+    <label for="product-sku" class="product-form-label">SKU</label>
+    <input type="text" name="product-sku" class="product-form-input" id="product-sku"
+           placeholder="Your Product Sku" required/>
+    <label for="product-description" class="product-form-label">Description</label>
+    <input type="text" name="product-description" class="product-form-input" id="product-description"
+           placeholder="your product description"/>
+    <button id="product-data-form-btn" type="submit">Submit</button>
+
+</form>
+
+
+

@@ -1,0 +1,14 @@
+{
+    "pointeger_student": {
+        "column": {
+            "entity_id": true,
+            "name": true,
+            "roll_no": true,
+            "customer_id": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "POINTEGER_STUDENT_CUSTOMER_ID_CUSTOMER_ENTITY_ENTITY_ID": true
+        }
+    }
+}

@@ -1,0 +1,27 @@
+<?php
+declare(strict_types=1);
+
+namespace Pointeger\Crud\Plugin;
+use Pointeger\Crud\Controller\Student\Save;
+use Magento\Framework\Message\ManagerInterface;
+use Magento\Framework\Controller\Result\RedirectFactory;
+Class ProductPlugin
+{
+    protected $messagemanger;
+    protected $redirectfactory;
+    public function __construct(ManagerInterface $messagemanger,RedirectFactory $redirectfactory)
+    {
+        $this->messagemanger=$messagemanger;
+        $this->redirectfactory=$redirectfactory;
+    }
+
+    public function afterExecute(Save $subject,$result)
+    {
+       // $this->messagemanger->addSuccessMessage("hello from after function");
+        $redirect=$this->redirectfactory->create();
+        $result=$redirect->setPath("pointeger_crud/post/form");
+        return $result;
+    }
+
+
+}

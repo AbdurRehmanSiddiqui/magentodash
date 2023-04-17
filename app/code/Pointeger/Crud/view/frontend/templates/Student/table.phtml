@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @var Magento\Framework\View\Element\Template $block
+ * @var Pointeger\Crud\ViewModel\Load $load
+ */
+$load = $block->getData('load_vm');
+$list = $load->getformdata();
+
+?>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Roll Number</th>
+        <th>Customer ID</th>
+    </tr>
+
+    <?php
+    if ($list) {
+        foreach ($list as $data) { ?>
+
+            <tr>
+                <td><?php
+                    echo $data->getData('entity_id'); ?></td>
+                <td><?php
+                    echo $data->getData('name'); ?></td>
+                <td><?php
+                    echo $data->getData('roll_no'); ?></td>
+                <td><?php
+                    echo $data->getData('customer_id'); ?></td>
+            </tr>
+            <?php
+        }
+    }
+    ?>
+
+</table>
+

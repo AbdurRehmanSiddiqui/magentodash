@@ -298,6 +298,8 @@ return [
         'Pointeger_Core' => 1,
         'Pointeger_Checkout' => 1,
         'Pointeger_Catalog' => 1,
+        'Pointeger_Crud' => 0,
+        'Pointeger_Order' => 1,
         'Temando_ShippingRemover' => 1,
         'Vertex_Tax' => 1,
         'Vertex_AddressValidation' => 1,
